@@ -1,0 +1,49 @@
+//example in typescript
+
+// examples/FormWithARIA.tsx
+
+import React, { useState } from 'react';
+
+export const FormWithARIA = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.includes('@')) {
+      setError('Inserisci un’email valida.');
+    } else {
+      setError('');
+      alert('Email inviata correttamente!');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} aria-labelledby="form-title">
+      <h2 id="form-title">Iscriviti alla newsletter</h2>
+
+      <label htmlFor="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        value={email}
+        aria-describedby="email-help"
+        onChange={(e) => setEmail(e.target.value)}
+        className="border p-2 block mb-2"
+      />
+      <div id="email-help" className="text-sm text-gray-600 mb-2">
+        Inserisci un indirizzo email valido.
+      </div>
+
+      {error && (
+        <div role="alert" className="text-red-600 mb-2">
+          {error}
+        </div>
+      )}
+
+      <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
+        Invia
+      </button>
+    </form>
+  );
+};
