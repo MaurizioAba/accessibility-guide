@@ -61,11 +61,7 @@ Guida pratica per costruire **interfacce React accessibili**, basata su [WCAG](h
 
 ### 7. **Skip to content**
 Permetti agli utenti di saltare direttamente al contenuto.
-
-"```tsx
-<a href="#main-content" className="sr-only focus:not-sr-only">
-  Salta al contenuto
-</a>"
+`<a href="#main-content" className="sr-only focus:not-sr-only">Salta al contenuto</a>`
 
 ### 8. **Preferisci elementi interattivi nativi**
 Evita di reinventare elementi come pulsanti o link usando <div> o <span> con onClick. Questo tipo di approccio rompe l’accessibilità perché:
@@ -77,15 +73,15 @@ Non attivano comportamenti attesi (es. Enter o Space).
 Non hanno ruoli (role) e annunci screen reader predefiniti.
 
 Usare e preferire SEMPRE elementi nativi come:
-<button> per azioni (submit, toggle, modale…)
+`<button> per azioni (submit, toggle, modale…)
 <a href> per la navigazione
-<input> e <textarea> per i moduli
+<input> e <textarea>` per i moduli
 
 ### 9. **Usa alt test descrittivi per le immagini**
 Le immagini devono sempre avere l’attributo alt, per garantire la fruibilità da parte di chi utilizza tecnologie assistive.
 Decorative: usa alt="" per evitare lettura inutile da parte dei lettori di schermo.
 
-<img src="profilo.png" alt="Foto profilo di Mario Rossi" />
+`<img src="profilo.png" alt="Foto profilo di Mario Rossi" />`
 
 ### 10. **Titoli strutturati (h1-h6)**
 Usa titoli in ordine gerarchico.
@@ -122,7 +118,7 @@ Usa aria-live="polite" o aria-live="assertive" per aggiornamenti dinamici.
 Esempio: risultati filtrati in tempo reale.
 
 ### 17. **Landmark roles**
-Usa landmark semantici "(<main>, <nav>, <aside>)" oppure role="main" ecc.
+Usa landmark semantici `"(<main>, <nav>, <aside>)" oppure role="main" `ecc.
 
 Aiutano la navigazione via screen reader.
 
