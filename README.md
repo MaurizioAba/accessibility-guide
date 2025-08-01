@@ -1,7 +1,7 @@
 📘 Accessibility Best Practices in Web Development (WCAG)
 Disponibile in:
 > - 🇮🇹 [Italiano](./README.it.md)
-> - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Presto
+> - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 [English](./README.en.md)
 
 ### Accessibilità vuol dire:
 Interfacce utilizzabili da tutte le persone,indipendentemente da disabilità permanenti, temporanee o situazionali. Significa progettare esperienze inclusive che garantiscano pari accesso e funzionalità per tutti gli utenti 

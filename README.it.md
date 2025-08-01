@@ -1,8 +1,5 @@
 # 📘 Accessibility Best Practices in Web Development (WCAG)
 
-> Available in:
-> - 🇮🇹 [Italiano](./README.it.md)
-
 Guida pratica per costruire **interfacce React accessibili**, basata su [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) e le best practice condivise dalla community.
 
 > Questa guida è pensata per sviluppatori scritta in italiano che vogliono scrivere codice **inclusivo**, **navigabile da tastiera**, compatibile con screen reader e più sostenibile per tuttə.
@@ -64,76 +61,64 @@ Permetti agli utenti di saltare direttamente al contenuto.
 `<a href="#main-content" className="sr-only focus:not-sr-only">Salta al contenuto</a>`
 
 ### 8. **Preferisci elementi interattivi nativi**
-Evita di reinventare elementi come pulsanti o link usando <div> o <span> con onClick. Questo tipo di approccio rompe l’accessibilità perché:
+- Evita di reinventare elementi come pulsanti o link usando <div> o <span> con onClick. Questo tipo di approccio rompe l’accessibilità perché:
+- Non sono focusabili da tastiera senza tabIndex.
+- Non attivano comportamenti attesi (es. Enter o Space).
+- Non hanno ruoli (role) e annunci screen reader predefiniti.
+- Usare e preferire SEMPRE elementi nativi come:
 
-Non sono focusabili da tastiera senza tabIndex.
-
-Non attivano comportamenti attesi (es. Enter o Space).
-
-Non hanno ruoli (role) e annunci screen reader predefiniti.
-
-Usare e preferire SEMPRE elementi nativi come:
 `<button> per azioni (submit, toggle, modale…)
 <a href> per la navigazione
 <input> e <textarea>` per i moduli
 
 ### 9. **Usa alt test descrittivi per le immagini**
-Le immagini devono sempre avere l’attributo alt, per garantire la fruibilità da parte di chi utilizza tecnologie assistive.
+- Le immagini devono sempre avere l’attributo alt, per garantire la fruibilità da parte di chi utilizza tecnologie assistive.
 Decorative: usa alt="" per evitare lettura inutile da parte dei lettori di schermo.
 
 `<img src="profilo.png" alt="Foto profilo di Mario Rossi" />`
 
 ### 10. **Titoli strutturati (h1-h6)**
-Usa titoli in ordine gerarchico.
-
-Non saltare livelli (es. non usare h3 senza h2).
+- Usa titoli in ordine gerarchico.
+- Non saltare livelli (es. non usare h3 senza h2).
 
 ### 11. **Responsività accessibile**
-Controlla che i contenuti siano leggibili anche su zoom 200%.
-Evita contenuti bloccati in orizzontale.
+- Controlla che i contenuti siano leggibili anche su zoom 200%.
+- Evita contenuti bloccati in orizzontale.
 
 ### 12. **Stati visivi e focus**
-Assicurati che il focus sia visibile (es. bordo, ombra).
-
-Usa :focus-visible o outline per coerenza.
+- Assicurati che il focus sia visibile (es. bordo, ombra).
+- Usa :focus-visible o outline per coerenza.
 
 ### 13. **Gestione delle notifiche**
-Usa role="status" o role="alert" per annunciare messaggi dinamici.
-
+- Usa role="status" o role="alert" per annunciare messaggi dinamici.
 Esempio: “Elemento aggiunto al carrello”.
 
 ### 14. **Lettori di schermo**
-Testa con VoiceOver, NVDA o JAWS.
-
-Verifica la lettura coerente di contenuti e moduli.
+- Testa con VoiceOver, NVDA o JAWS.
+- Verifica la lettura coerente di contenuti e moduli.
 
 ### 15. **Animazioni e motion**
-Evita animazioni complesse o rapide.
-
-Rispetta prefers-reduced-motion per chi le disattiva.
+- Evita animazioni complesse o rapide.
+- Rispetta prefers-reduced-motion per chi le disattiva.
 
 ### 16. **ARIA Live Regions**
-Usa aria-live="polite" o aria-live="assertive" per aggiornamenti dinamici.
-
+- Usa aria-live="polite" o aria-live="assertive" per aggiornamenti dinamici.
 Esempio: risultati filtrati in tempo reale.
 
 ### 17. **Landmark roles**
-Usa landmark semantici `"(<main>, <nav>, <aside>)" oppure role="main" `ecc.
-
+- Usa landmark semantici `"(<main>, <nav>, <aside>)" oppure role="main" `ecc.
 Aiutano la navigazione via screen reader.
 
 ### 18. **Contenuti multimediali**
-Video: sempre sottotitoli.
-
-Audio: trascrizioni testuali disponibili.
+- Video: sempre sottotitoli.
+- Audio: trascrizioni testuali disponibili.
 
 ### 19. **Gestione degli errori nei form**
-Evidenzia errori con colori e testo (non solo rosso).
-
-Usa aria-invalid="true" e aria-describedby.
+- Evidenzia errori con colori e testo (non solo rosso).
+- Usa `aria-invalid="true` e aria-describedby.
 
 ### 20. **Accessibilità nei componenti custom**
-Quando crei modali, dropdown o menu:
+- Quando crei modali, dropdown o menu:
 Chiudi con Esc
 Focus loop
-Annunci tramite aria-labelledby
+-Annunci tramite aria-labelledby
