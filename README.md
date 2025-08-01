@@ -1,4 +1,5 @@
-📘 Accessibility Best Practices in Web Development (WCAG)
+ ## Guida: accessibilità e best practices nel Web Development (WCAG) 📘
+ 
 Disponibile in:
 > - 🇮🇹 [Italiano](./README.it.md)
 > - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 [English](./README.en.md)
@@ -11,7 +12,7 @@ che stanno navigando.
 La misura in cui un'interfaccia consente agli utenti di raggiungere le proprie ricerce in modo efficace e soddisfacente.
 
 
-## In ambito PA
+#### In ambito PA
 Molte pubbliche amministrazioni ancora sono poco dotate di questi strumenti ad esempio: avviare rapidamente una chiamata (per utenti ipo/non vedenti i numeri sono solamente leggibili dagli screen reader e non cliccabili, obbligando l’utente a
 ricordare o trascrivere manualmente)
 
